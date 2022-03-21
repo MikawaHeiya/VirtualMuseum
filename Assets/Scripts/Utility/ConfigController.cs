@@ -24,6 +24,8 @@ public class ConfigController : MonoBehaviour
     {
         var config = new ConfigInfo();
         config.ShowDebugConsole = false;
+        config.QrCodeCameraFlushFrequency = 5;
+        config.PositiveGestureType = 0;
 
         return config;
     }
