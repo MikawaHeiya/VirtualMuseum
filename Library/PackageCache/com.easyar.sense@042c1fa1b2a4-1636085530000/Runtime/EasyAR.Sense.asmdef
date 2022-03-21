@@ -1,0 +1,63 @@
+{
+	"name": "EasyAR.Sense",
+	"references": [
+		"EasyAR.SpatialMap",
+		"Unity.XR.ARFoundation",
+		"Unity.XR.ARSubsystems",
+		"Huawei.AREngine",
+		"Unity.RenderPipelines.Core.Runtime",
+		"Unity.RenderPipelines.Lightweight.Runtime",
+		"Unity.RenderPipelines.Universal.Runtime",
+		"NRSDK"
+	],
+	"includePlatforms": [],
+	"excludePlatforms": [],
+	"allowUnsafeCode": true,
+	"overrideReferences": false,
+	"precompiledReferences": [],
+	"autoReferenced": true,
+	"defineConstraints": [],
+	"versionDefines": [
+		{
+			"name": "com.easyar.spatialmap",
+			"expression": "4.4.0",
+			"define": "EASYAR_ENABLE_CLOUDSPATIALMAP"
+		},
+		{
+			"name": "com.unity.xr.arfoundation",
+			"expression": "4.0.8",
+			"define": "EASYAR_ARFOUNDATION_ENABLE"
+		},
+		{
+			"name": "com.huawei.arengine",
+			"expression": "2.11.0",
+			"define": "EASYAR_HWARENGINE_ENABLE"
+		},
+		{
+			"name": "com.unity.render-pipelines.lightweight",
+			"expression": "[5.7.2,7.0.0)",
+			"define": "EASYAR_LWRP_ENABLE"
+		},
+		{
+			"name": "com.unity.render-pipelines.universal",
+			"expression": "7.0.0",
+			"define": "EASYAR_URP_ENABLE"
+		},
+		{
+			"name": "com.easyar.sense",
+			"expression": "[4.4.0]",
+			"define": "EASYAR_ENABLE_SENSE"
+		},
+		{
+			"name": "com.nreal.sdk",
+			"expression": "1.5.7",
+			"define": "EASYAR_ENABLE_NREAL"
+		},
+		{
+			"name": "com.nreal.sdk",
+			"expression": "[1.5.7,1.6.0)",
+			"define": "EASYAR_ENABLE_NREAL_1_5"
+		}
+	],
+	"noEngineReferences": false
+}

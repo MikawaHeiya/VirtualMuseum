@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3140675501
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ab_test_cube
+      Dependencies: {}

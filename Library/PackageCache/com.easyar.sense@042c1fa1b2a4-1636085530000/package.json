@@ -1,0 +1,213 @@
+{
+  "name": "com.easyar.sense",
+  "displayName": "EasyAR Sense",
+  "version": "4.4.0+2424.469da7da",
+  "unity": "2019.2",
+  "description": "EasyAR Sense Unity Plugin. \r\nEasyAR Sense Unity Plugin is a very thin wrapper build above EasyAR Sense C# API to expose EasyAR Sense features into Unity. \r\nPlease read the documents on [EasyAR website](https://www.easyar.com) for how to use.",
+  "keywords": [
+    "easyar",
+    "augmented",
+    "reality",
+    "sdk",
+    "ar",
+    "cloud",
+    "spatial",
+    "map",
+    "xr"
+  ],
+  "author": {
+    "name": "VisionStar Information Technology (Shanghai) Co., Ltd.",
+    "email": "support@easyar.com",
+    "url": "https://www.easyar.com"
+  },
+  "dependencies": {
+    "com.unity.ugui": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "**All Handheld AR**",
+      "description": "",
+      "path": "Samples~/Handheld"
+    },
+    {
+      "displayName": "**WorldSensing All**",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing"
+    },
+    {
+      "displayName": "WorldSensing SpatialMap_SparseSpatialMap",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SpatialMap_SparseSpatialMap"
+    },
+    {
+      "displayName": "WorldSensing SpatialMap_Sparse_Localizing",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SpatialMap_Sparse_Localizing"
+    },
+    {
+      "displayName": "WorldSensing SpatialMap_Sparse_ImageTarget",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SpatialMap_Sparse_ImageTarget"
+    },
+    {
+      "displayName": "WorldSensing SpatialMap_Sparse_Building",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SpatialMap_Sparse_Building"
+    },
+    {
+      "displayName": "WorldSensing SpatialMap_Sparse_Dense_Building",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SpatialMap_Sparse_Dense_Building"
+    },
+    {
+      "displayName": "WorldSensing SpatialMap_Dense_BallGame",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SpatialMap_Dense_BallGame"
+    },
+    {
+      "displayName": "WorldSensing MotionTracking Fusion",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/MotionTracking_Fusion"
+    },
+    {
+      "displayName": "WorldSensing MotionTracking (Simple)",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/MotionTracking"
+    },
+    {
+      "displayName": "WorldSensing MotionTracking_ImageTarget",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/MotionTracking_ImageTarget"
+    },
+    {
+      "displayName": "WorldSensing SurfaceTracking",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SurfaceTracking"
+    },
+    {
+      "displayName": "WorldSensing SurfaceTracking_ImageTarget",
+      "description": "",
+      "path": "Samples~/Handheld/WorldSensing/SurfaceTracking_ImageTarget"
+    },
+    {
+      "displayName": "**ObjectSensing All**",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing"
+    },
+    {
+      "displayName": "ObjectSensing ImageTracking_Targets",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ImageTracking_Targets"
+    },
+    {
+      "displayName": "ObjectSensing ImageTracking_Video",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ImageTracking_Video"
+    },
+    {
+      "displayName": "ObjectSensing ImageTracking_MotionFusion",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ImageTracking_MotionFusion"
+    },
+    {
+      "displayName": "ObjectSensing ImageTracking_CloudRecognition",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ImageTracking_CloudRecognition"
+    },
+    {
+      "displayName": "ObjectSensing ImageTracking_TargetOnTheFly",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ImageTracking_TargetOnTheFly"
+    },
+    {
+      "displayName": "ObjectSensing ImageTracking_Coloring3D",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ImageTracking_Coloring3D"
+    },
+    {
+      "displayName": "ObjectSensing MultiTarget_SingleTracker",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/MultiTarget_SingleTracker"
+    },
+    {
+      "displayName": "ObjectSensing MultiTarget_MultiType",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/MultiTarget_MultiType"
+    },
+    {
+      "displayName": "ObjectSensing MultiTarget_SameImage",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/MultiTarget_SameImage"
+    },
+    {
+      "displayName": "ObjectSensing MultiTarget_MultiTracker",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/MultiTarget_MultiTracker"
+    },
+    {
+      "displayName": "ObjectSensing ObjectTracking",
+      "description": "",
+      "path": "Samples~/Handheld/ObjectSensing/ObjectTracking"
+    },
+    {
+      "displayName": "**DeviceSupport All**",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport"
+    },
+    {
+      "displayName": "DeviceSupport Camera_VideoCamera",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport/Camera_VideoCamera"
+    },
+    {
+      "displayName": "DeviceSupport VideoRecording",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport/VideoRecording"
+    },
+    {
+      "displayName": "DeviceSupport FrameRecording",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport/FrameRecording"
+    },
+    {
+      "displayName": "DeviceSupport Camera_CustomCamera",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport/Camera_CustomCamera"
+    },
+    {
+      "displayName": "DeviceSupport ARFoundation",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport/ARFoundation"
+    },
+    {
+      "displayName": "DeviceSupport HuaweiAREngine",
+      "description": "",
+      "path": "Samples~/Handheld/DeviceSupport/HuaweiAREngine"
+    },
+    {
+      "displayName": "AllSamplesLauncher",
+      "description": "",
+      "path": "Samples~/Handheld/AllSamplesLauncher"
+    },
+    {
+      "displayName": "Eyewear_Nreal_SpatialMap_Building",
+      "description": "",
+      "path": "Samples~/Eyewear/Eyewear_Nreal_SpatialMap_Building"
+    },
+    {
+      "displayName": "Eyewear_Nreal_ImageTracking_InWorld",
+      "description": "",
+      "path": "Samples~/Eyewear/Eyewear_Nreal_ImageTracking_InWorld"
+    },
+    {
+      "displayName": "Eyewear_DeviceHasNoTracking",
+      "description": "",
+      "path": "Samples~/Eyewear/Eyewear_DeviceHasNoTracking"
+    },
+    {
+      "displayName": "StreamingAssets",
+      "description": "",
+      "path": "Samples~/StreamingAssets"
+    }
+  ]
+}

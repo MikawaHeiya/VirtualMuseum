@@ -1,0 +1,77 @@
+{
+	"name": "EasyAR.Sense.Editor",
+	"references": [
+		"EasyAR.Sense",
+		"Huawei.AREngine",
+		"Unity.XR.ARFoundation",
+		"Unity.XR.Management",
+		"Unity.XR.Management.Editor",
+		"Unity.XR.ARCore",
+		"EasyAR.SpatialMap",
+		"Unity.RenderPipelines.Core.Runtime",
+		"Unity.RenderPipelines.Universal.Runtime",
+		"NRSDK"
+	],
+	"includePlatforms": [
+		"Editor"
+	],
+	"excludePlatforms": [],
+	"allowUnsafeCode": false,
+	"overrideReferences": false,
+	"precompiledReferences": [],
+	"autoReferenced": true,
+	"defineConstraints": [],
+	"versionDefines": [
+		{
+			"name": "com.easyar.spatialmap",
+			"expression": "",
+			"define": "EASYAR_ENABLE_CLOUDSPATIALMAP"
+		},
+		{
+			"name": "com.easyar.sense.binding",
+			"expression": "",
+			"define": "EASYAR_USE_SEPERATE_BINDING"
+		},
+		{
+			"name": "com.unity.xr.arfoundation",
+			"expression": "4.0.8",
+			"define": "EASYAR_ARFOUNDATION_ENABLE"
+		},
+		{
+			"name": "com.unity.xr.arcore",
+			"expression": "[2.1.0,2.2.0)",
+			"define": "EASYAR_ENABLE_UNITYARCORE"
+		},
+		{
+			"name": "com.unity.xr.arcore",
+			"expression": "3.0.0",
+			"define": "EASYAR_ENABLE_UNITYARCORE"
+		},
+		{
+			"name": "com.unity.xr.management",
+			"expression": "3.0.0",
+			"define": "EASYAR_ENABLE_XRMANAGEMENT"
+		},
+		{
+			"name": "com.unity.xr.management",
+			"expression": "[3.0.0,4.0.0)",
+			"define": "EASYAR_ENABLE_XRMANAGEMENT_3"
+		},
+		{
+			"name": "com.huawei.arengine",
+			"expression": "2.11.0",
+			"define": "EASYAR_HWARENGINE_ENABLE"
+		},
+		{
+			"name": "com.unity.render-pipelines.universal",
+			"expression": "7.0.0",
+			"define": "EASYAR_URP_ENABLE"
+		},
+		{
+			"name": "com.nreal.sdk",
+			"expression": "1.5.7",
+			"define": "EASYAR_ENABLE_NREAL"
+		}
+	],
+	"noEngineReferences": false
+}
