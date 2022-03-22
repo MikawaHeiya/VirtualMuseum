@@ -7,6 +7,6 @@ public class QrCodeButton : MainFeatureButton
     public override void OnButtonClicked()
     {
         base.OnButtonClicked();
-        FindObjectOfType<SceneLoader>().LoadScene(1);
+        FindObjectOfType<SceneLoader>().LoadScene(2);
     }
 }

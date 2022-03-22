@@ -78,6 +78,6 @@ public class ExhibitionSceneApplication : MonoBehaviour
 
     public void OnReturnButtonClicked()
     {
-        sceneLoader.LoadScene(0);
+        sceneLoader.LoadScene(1);
     }
 }

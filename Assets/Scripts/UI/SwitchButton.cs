@@ -24,11 +24,17 @@ public class SwitchButton : MonoBehaviour
         }
     }
 
-    public event System.Action StatusChanged;
+    public event System.Action<bool> StatusChanged;
+
+    public void InitializeStatus(bool value)
+    {
+        currentStatus = value;
+        animator.SetTrigger(Status ? "Enable" : "Disable");
+    }
 
     public void OnStatusChanged()
     {
-        StatusChanged?.Invoke();
+        StatusChanged?.Invoke(Status);
         animator.SetTrigger(Status ? "Enable" : "Disable");
     }
 
@@ -38,7 +44,10 @@ public class SwitchButton : MonoBehaviour
     }
 
     private void Start()
-    {
+    {   
         animator = GetComponent<Animator>();
+        StatusChanged += FindObjectOfType<ConfigSceneApplication>().ConfigHandler_ShowDebugConsole;
+        currentStatus = FindObjectOfType<ConfigController>().Config.ShowDebugConsole;
+        animator.SetTrigger(Status ? "Enable" : "Disable");
     }
 }

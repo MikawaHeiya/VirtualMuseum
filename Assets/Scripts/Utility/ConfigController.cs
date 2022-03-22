@@ -30,6 +30,14 @@ public class ConfigController : MonoBehaviour
         return config;
     }
 
+    public static bool ConfigInfoEquals(ConfigInfo l, ConfigInfo r)
+    {
+        return 
+            l.ShowDebugConsole == r.ShowDebugConsole &&
+            l.QrCodeCameraFlushFrequency == r.QrCodeCameraFlushFrequency &&
+            l.PositiveGestureType == r.PositiveGestureType;
+    }
+
     public static int GestureTypeToIndex(ViveHandTracking.GestureType gestureType)
     {
         switch (gestureType)

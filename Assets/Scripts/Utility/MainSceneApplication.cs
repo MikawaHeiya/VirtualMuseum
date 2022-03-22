@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MainSceneApplication : MonoBehaviour
 {
-    public GameObject debugConsolePrefab;
     public GameObject loginDialogPrefab;
     public GameObject requestDialogPrefab;
+    public GameObject infoDialog;
     public GameObject mainCamera;
     public GameObject canvas;
     public GameObject loading;
@@ -18,8 +18,6 @@ public class MainSceneApplication : MonoBehaviour
     public event System.Action<UserInfo> UserLogined;
     public event System.Action UserLogouted;
 
-    private GameObject debugConsole;
-
     private void Start()
     {
 #if !UNITY_EDITOR
@@ -29,11 +27,6 @@ public class MainSceneApplication : MonoBehaviour
         configController = FindObjectOfType<ConfigController>();
 
         loading.SetActive(false);
-
-        if (configController.Config.ShowDebugConsole && debugConsole == null)
-        {
-            debugConsole = Instantiate(debugConsolePrefab);
-        }
     }
 
     public void SendVerifyCodeRequest(string mail)
@@ -72,5 +65,10 @@ public class MainSceneApplication : MonoBehaviour
         dialog.SendVerifyCodeButtonClicked += () => { SendVerifyCodeRequest(dialog.MailInputContent); };
         dialog.LoginButtonClicked += 
             () => { LoginWithVerifyCode(dialog.MailInputContent, dialog.VerifyCodeInputContent); };
+    }
+
+    public void InstantiateInfoDialog()
+    {
+        Instantiate(infoDialog, canvas.transform);
     }
 }

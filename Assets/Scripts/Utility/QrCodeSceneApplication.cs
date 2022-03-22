@@ -25,13 +25,14 @@ public class QrCodeSceneApplication : MonoBehaviour
     private BarcodeReader reader = new BarcodeReader();
 
     private SceneLoader sceneLoader;
+    private ConfigController configController;
 
     private AssetBundleInfo assetBundleInfo;
 
     public void OnInstantieteButtonClicked()
     {
         parameterPasser.assetBundleInfo = assetBundleInfo;
-        sceneLoader.LoadScene(2);
+        sceneLoader.LoadScene(3);
     }
 
     private void Start()
@@ -44,6 +45,8 @@ public class QrCodeSceneApplication : MonoBehaviour
 
         sceneLoader = FindObjectOfType<SceneLoader>();
         sceneLoader.loading = loading;
+
+        configController = FindObjectOfType<ConfigController>();
     }
 
     private IEnumerator InitializeCamera()
@@ -79,7 +82,7 @@ public class QrCodeSceneApplication : MonoBehaviour
 
     private IEnumerator Scan()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f / configController.Config.QrCodeCameraFlushFrequency);
         yield return new WaitForEndOfFrame();
 
         var result = reader.Decode(webCamTexture.GetPixels32(), webCamTexture.width, webCamTexture.height);
@@ -109,6 +112,6 @@ public class QrCodeSceneApplication : MonoBehaviour
 
     public void OnBackButtonClicked()
     {
-        sceneLoader.LoadScene(0);
+        sceneLoader.LoadScene(1);
     }
 }

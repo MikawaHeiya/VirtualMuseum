@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InitializeSceneApplication : MonoBehaviour
 {
+    public GameObject debugConsolePrefab;
+
     private SceneLoader sceneLoader;
     private ConfigController configController;
 
@@ -18,6 +20,10 @@ public class InitializeSceneApplication : MonoBehaviour
     private async void Initialize()
     {
         await configController.ReadConfig();
-        sceneLoader.LoadScene(0);
+        if (configController.Config.ShowDebugConsole)
+        {
+            Instantiate(debugConsolePrefab);
+        }
+        sceneLoader.LoadScene(1);
     }
 }

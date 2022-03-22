@@ -7,5 +7,6 @@ public class InformationButton : MainFeatureButton
     public override void OnButtonClicked()
     {
         base.OnButtonClicked();
+        FindObjectOfType<MainSceneApplication>().InstantiateInfoDialog();
     }
 }

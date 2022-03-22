@@ -5,7 +5,7 @@ using ViveHandTracking;
 
 public class InputUtil : MonoBehaviour
 {
-    public GestureType positiveGestureType;
+    private GestureType positiveGestureType;
 
 #if !UNITY_EDITOR
     private bool lastPinch = false;
@@ -18,6 +18,8 @@ public class InputUtil : MonoBehaviour
     public bool ClickInputEntened { get; private set; }
     public bool RotateInputStayed { get; private set; }
     public Quaternion RotateInput { get; private set; }
+
+    private ConfigController configController;
 
     private void Update()
     {
@@ -53,5 +55,7 @@ public class InputUtil : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        configController = FindObjectOfType<ConfigController>();
+        positiveGestureType = ConfigController.IndexToGestureType(configController.Config.PositiveGestureType);
     }
 }

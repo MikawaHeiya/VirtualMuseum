@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Utility\ConfigSceneApplication.cs" />
     <Compile Include="Assets\Scripts\Utility\InitializeSceneApplication.cs" />
+    <Compile Include="Assets\Scripts\UI\SwitchButton.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonClick.cs" />
     <Compile Include="Assets\Scripts\Utility\QrCodeSceneApplication.cs" />
     <Compile Include="Assets\Scripts\UI\UserButton.cs" />
@@ -78,7 +79,7 @@
     <Compile Include="Assets\Scripts\Utility\UserInfo.cs" />
     <Compile Include="Assets\Scripts\Utility\ExhibitionSceneParameterPasser.cs" />
     <Compile Include="Assets\Scripts\UI\LoginDialog.cs" />
-    <Compile Include="Assets\Scripts\UI\SwitchButton.cs" />
+    <Compile Include="Assets\Scripts\UI\InfoDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\ColorQuad\ColorQuad.shader" />
