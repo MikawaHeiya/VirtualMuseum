@@ -10,11 +10,18 @@ Virtual Museum 是一款服务于博物馆等公共场所的APP，它提供基�
 ### 手势识别
 Virtual Museum 中，大多数UI都可以通过手势识别进行操作。
 将左手置于Android手机摄像头前方，伸出拇指与食指并将指尖合拢将输入UI光标向下一个移动的指令，左手由非握拳状态转为握拳状态将输入“确定”指令。
-默认情况下“确定”指令所识别的手势为握拳，可以在设置界面更改。
+默认情况下“确定”指令所识别的手势为握拳，可以在设置界面更改。  
+
+![设置](https://github.com/MikawaHeiya/VirtualMuseum/raw/main/ProjectImages/config_scene.jpg)  
+
 ### 通过二维码生成并展示3D物体
 用户可以通过扫描二维码的方式在Android手机上更直观地欣赏博物馆内的文物，请注意此过程需要网络连接。
 
-![扫码](https://github.com/MikawaHeiya/VirtualMuseum/raw/main/ProjectImages/scan_qrcode_demo.gif)
+![扫码](https://github.com/MikawaHeiya/VirtualMuseum/raw/main/ProjectImages/scan_qrcode_demo.gif)  
+
+生成的3D物体同样可以进行手势识别的交互，将左手置于Android手机摄像机前，食指与拇指轻触以切换“旋转”或“缩放”模式，保持握拳并旋转调整拳头角度以旋转或缩放3D物体。  
+
+![3D](https://github.com/MikawaHeiya/VirtualMuseum/raw/main/ProjectImages/box_demo.gif)
 
 ### 登录
 Virtual Museum 提供用户系统，并使用邮箱验证的方式登陆或注册。
