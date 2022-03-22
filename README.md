@@ -1,6 +1,6 @@
 # VirtualMuseum
 Virtual Museum 是一款服务于博物馆等公共场所的APP，它提供基于AR稀疏地图的室内导航功能、展示博物馆内文物、使用手势识别操纵UI以及展示的文物等功能。
-![主界面](https://github.com/MikawaHeiya/VirtualMuseum/ProjectImages/main_scene.jpg)
+![主界面](https://github.com/MikawaHeiya/VirtualMuseum/raw/main/ProjectImages/main_scene.jpg)
 ## 如何运行此项目
 使用Unity Hub打开位于您PC本地的此项目，点击Play按钮开始运行。
 如果需要使用手势识别等功能，请将Android手机连接到您的PC上，点击File->Build And Run，在您的Android手机上运行，请注意需要允许应用的摄像头权限请求。
