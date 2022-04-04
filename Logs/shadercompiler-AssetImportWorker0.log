@@ -1,0 +1,6 @@
+Base path: 'C:/Users/MikawaHeiya/My_Library/Environment/Unity/Unity Editor/2020.3.30f1c1/Editor/Data', plugins path 'C:/Users/MikawaHeiya/My_Library/Environment/Unity/Unity Editor/2020.3.30f1c1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Unhandled exception: Protocol error - failed to read magic number (error -2147483644, transferred 0/4)
+
+Quitting shader compiler process
