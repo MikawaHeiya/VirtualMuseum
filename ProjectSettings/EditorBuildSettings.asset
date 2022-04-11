@@ -20,4 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Config.unity
     guid: 92225c98259b6c9459790212fc26ef7a
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Manomotion/Examples/Detection/Detection.unity
+    guid: 9d49c5fee5da54167bda809da4ef1922
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7b4568c0e3a4d754188b9a3d992531fa,
+      type: 2}

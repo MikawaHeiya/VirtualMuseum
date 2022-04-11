@@ -1,33 +1,37 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BoundingBoxUI
     - ButtonClick
     - ButtonSetElment
     - ConfigButton
     - ConfigController
     - ConfigSceneApplication
+    - DontDestroyOnLoad
+    - ExampleDetectionEdges
     - ExhibitionSceneApplication
     - ExhibitionSceneParameterPasser
     - InfoDialog
     - InformationButton
     - InitializeSceneApplication
+    - InputManagerArFoundation
     - InputUtil
     - LoginDialog
     - MainSceneApplication
     - MainUIController
+    - ManoEvents
+    - ManoUtils
+    - ManoVisualization
+    - ManomotionManager
+    - ManomotionUIManagment
     - NavigationButton
     - QrCodeButton
     - QrCodeSceneApplication
     - RequestDialog
     - SceneLoader
     - SwitchButton
+    - ToggleVisualizationValues
     - UserButton
-    HTC.ViveHandTracking.dll:
-    - ViveHandTracking.EditorEngine
-    - ViveHandTracking.GestureProvider
-    - ViveHandTracking.VHTSettings
-    - ViveHandTracking.ViveHandTrackingEngine
-    - ViveHandTracking.WaveVRHandEngine
     IngameDebugConsole.Runtime.dll:
     - IngameDebugConsole.DebugLogItem
     - IngameDebugConsole.DebugLogManager
@@ -43,16 +47,32 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.XR.ARFoundation.dll:
+    - UnityEngine.XR.ARFoundation.ARCameraBackground
+    - UnityEngine.XR.ARFoundation.ARCameraManager
+    - UnityEngine.XR.ARFoundation.ARInputManager
+    - UnityEngine.XR.ARFoundation.ARPlane
+    - UnityEngine.XR.ARFoundation.ARPlaneManager
+    - UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer
+    - UnityEngine.XR.ARFoundation.ARPoseDriver
+    - UnityEngine.XR.ARFoundation.ARSession
+    - UnityEngine.XR.ARFoundation.ARSessionOrigin
+    Unity.XR.Management.Editor.dll:
+    - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.SpatialTracking.dll:
+    - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
@@ -76,7 +96,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Config.unity:
+    Assets/Manomotion/Examples/Detection/Detection.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -85,13 +105,146 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 102
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11392}
+    - Class: 114
+      Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
+      Script: {instanceID: 11398}
+    - Class: 114
+      Script: {instanceID: 11428}
+    - Class: 114
+      Script: {instanceID: 11586}
+    - Class: 114
+      Script: {instanceID: 11688}
+    - Class: 114
+      Script: {instanceID: 11718}
+    - Class: 114
+      Script: {instanceID: 11978}
+    - Class: 114
+      Script: {instanceID: 12038}
+    - Class: 114
+      Script: {instanceID: 12048}
+    - Class: 114
+      Script: {instanceID: 12126}
+    - Class: 114
+      Script: {instanceID: 12312}
+    - Class: 114
+      Script: {instanceID: 12364}
+    - Class: 114
+      Script: {instanceID: 12446}
+    - Class: 114
+      Script: {instanceID: 12570}
+    - Class: 114
+      Script: {instanceID: 12782}
+    - Class: 114
+      Script: {instanceID: 12844}
+    - Class: 114
+      Script: {instanceID: 12948}
+    - Class: 114
+      Script: {instanceID: 13016}
+    - Class: 114
+      Script: {instanceID: 13100}
+    - Class: 114
+      Script: {instanceID: 13338}
+    - Class: 114
+      Script: {instanceID: 13372}
+    - Class: 114
+      Script: {instanceID: 13438}
+    - Class: 114
+      Script: {instanceID: 13628}
+    - Class: 114
+      Script: {instanceID: 13662}
+    - Class: 114
+      Script: {instanceID: 13686}
+    - Class: 114
+      Script: {instanceID: 13814}
+    - Class: 114
+      Script: {instanceID: 13862}
+    - Class: 114
+      Script: {instanceID: 13968}
+    - Class: 114
+      Script: {instanceID: 14026}
+    - Class: 114
+      Script: {instanceID: 14134}
+    - Class: 114
+      Script: {instanceID: 14196}
+    - Class: 114
+      Script: {instanceID: 14238}
+    - Class: 114
+      Script: {instanceID: 14460}
+    - Class: 114
+      Script: {instanceID: 14494}
+    - Class: 114
+      Script: {instanceID: 14660}
+    - Class: 114
+      Script: {instanceID: 14684}
+    - Class: 114
+      Script: {instanceID: 14738}
+    - Class: 114
+      Script: {instanceID: 14806}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Config.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -106,33 +259,33 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11578}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 12094}
+      Script: {instanceID: 12288}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 14572}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14738}
     - Class: 114
-      Script: {instanceID: 14054}
+      Script: {instanceID: 14784}
     - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 14806}
     - Class: 114
-      Script: {instanceID: 14094}
+      Script: {instanceID: 14830}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -156,25 +309,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 4
       Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
     - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -189,23 +330,21 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 13980}
+      Script: {instanceID: 14738}
     - Class: 114
-      Script: {instanceID: 14018}
-    - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 14806}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -252,75 +391,65 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 11850}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12262}
+      Script: {instanceID: 12510}
     - Class: 114
-      Script: {instanceID: 12458}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 13016}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 13372}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 13544}
     - Class: 114
-      Script: {instanceID: 12934}
+      Script: {instanceID: 13614}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 13628}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 13692}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 13712}
     - Class: 114
-      Script: {instanceID: 13178}
+      Script: {instanceID: 13862}
     - Class: 114
-      Script: {instanceID: 13184}
+      Script: {instanceID: 14026}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 14494}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 14630}
     - Class: 114
-      Script: {instanceID: 13782}
+      Script: {instanceID: 14684}
     - Class: 114
-      Script: {instanceID: 13822}
+      Script: {instanceID: 14738}
     - Class: 114
-      Script: {instanceID: 13934}
-    - Class: 114
-      Script: {instanceID: 13978}
-    - Class: 114
-      Script: {instanceID: 14018}
-    - Class: 114
-      Script: {instanceID: 14072}
-    - Class: 114
-      Script: {instanceID: 14148}
-    - Class: 114
-      Script: {instanceID: 26858}
+      Script: {instanceID: 14806}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -348,19 +477,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 74
+    - Class: 64
       Script: {instanceID: 0}
-    - Class: 81
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
+      Script: {instanceID: 0}
+    - Class: 102
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -369,50 +506,82 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11664}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11640}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12362}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12956}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 12584}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13338}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 13346}
     - Class: 114
-      Script: {instanceID: 14034}
+      Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 13408}
+    - Class: 114
+      Script: {instanceID: 13628}
+    - Class: 114
+      Script: {instanceID: 13662}
+    - Class: 114
+      Script: {instanceID: 13688}
+    - Class: 114
+      Script: {instanceID: 13814}
+    - Class: 114
+      Script: {instanceID: 13968}
+    - Class: 114
+      Script: {instanceID: 14134}
+    - Class: 114
+      Script: {instanceID: 14196}
+    - Class: 114
+      Script: {instanceID: 14278}
+    - Class: 114
+      Script: {instanceID: 14306}
+    - Class: 114
+      Script: {instanceID: 14460}
+    - Class: 114
+      Script: {instanceID: 14660}
+    - Class: 114
+      Script: {instanceID: 14738}
+    - Class: 114
+      Script: {instanceID: 14756}
+    - Class: 114
+      Script: {instanceID: 14806}
+    - Class: 114
+      Script: {instanceID: 57980}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -460,57 +629,57 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11850}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 13016}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 13284}
     - Class: 114
-      Script: {instanceID: 12934}
+      Script: {instanceID: 13372}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 13628}
     - Class: 114
-      Script: {instanceID: 13178}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13862}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 14026}
     - Class: 114
-      Script: {instanceID: 13568}
+      Script: {instanceID: 14178}
     - Class: 114
-      Script: {instanceID: 13822}
+      Script: {instanceID: 14494}
     - Class: 114
-      Script: {instanceID: 13978}
+      Script: {instanceID: 14684}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14738}
     - Class: 114
-      Script: {instanceID: 14034}
+      Script: {instanceID: 14756}
     - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 14806}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -538,16 +707,22 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
+      Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: Text
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -556,16 +731,16 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPoseDriver
+  - hash:
+      serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: ffe7a172d4d00820ba1500f2ee83de13
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: HandDisplaySwitch
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -580,22 +755,16 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 9b8b4244070a3098126315fad0eb23e9
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: ModelRenderer
-  - hash:
-      serializedVersion: 2
-      Hash: 4aa604ef6f14d6fd97c73e822ab2052e
+      Hash: a15951e7f0c753c4a617a0992759c1c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SwitchButton
   - hash:
       serializedVersion: 2
-      Hash: 55f3330aefc46870debc7d8f48eefd1d
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: CustomGestureProvider
+      Hash: 18624e1a5dfb4e13e9ed07462db50cc0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManoVisualization
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -610,10 +779,22 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: cc8808856b6e43c5c4942e5f59d7abef
+      Hash: 60f3f125226e96dca38d34c27dd37973
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ManoMotion.UI.Buttons
+    className: UIIconBehavior
+  - hash:
+      serializedVersion: 2
+      Hash: 70c3b36220df677d42786532540c4248
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainSceneApplication
+  - hash:
+      serializedVersion: 2
+      Hash: 04e4a8b0447477cc4e933d9e5311188f
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -628,16 +809,28 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: ViveHandTrackingEngine
+      Hash: b7fa2d96b1ca446bfca517aad7a48823
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManoUtils
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 3d7fd2c77df46a81ff5ed68639554ea6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ApplicationManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_PhoneNumberValidator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -658,13 +851,25 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 98aa0a0c8ff2910eb12af89c7e0eb661
+    assemblyName: Unity.XR.Management.dll
+    namespaceName: UnityEngine.XR.Management
+    className: XRGeneralSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 9b6303c7164a38e06044ec2036c18b6b
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARParticipantManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: cf629cc6f8365ceabcf3068b5221c52a
+      Hash: 217bfa83ad6c80fad9a0ff2887b8b268
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainFeatureButton
@@ -676,7 +881,13 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 8855709c64a3ffdd4f4e1b1828f3a457
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARRaycastManager
+  - hash:
+      serializedVersion: 2
+      Hash: 93800ec16767a717a91615a35e532813
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QrCodeSceneApplication
@@ -694,7 +905,7 @@ ScriptsOnlyBuild:
     className: SceneLoader
   - hash:
       serializedVersion: 2
-      Hash: 4ce15e99c635d2567873d27549d1f16f
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_GestureText
@@ -712,12 +923,6 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 47e19d681fd5ae696d69b522d331e8b6
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: DualHandGestureProducer
-  - hash:
-      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -728,6 +933,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 18441cc3abdcbaa4a26095fc6d530500
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManoEvents
+  - hash:
+      serializedVersion: 2
+      Hash: eb209657734b3f197394254e7a1fbbcc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARCubeInteraction
+  - hash:
+      serializedVersion: 2
+      Hash: 7f5c55cb7b3151ce240452eb85500d32
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPlaneManager
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -754,6 +977,24 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HandSideInstruction
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARAnchor
+  - hash:
+      serializedVersion: 2
+      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -772,10 +1013,46 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 7abad2676cd1818f8e82e720f2631fb8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Category
+  - hash:
+      serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark03
+  - hash:
+      serializedVersion: 2
+      Hash: e8733e39efa851172df1c9eaef062265
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPlane
+  - hash:
+      serializedVersion: 2
+      Hash: 00bfd7cc5ebc89d52df71777a198a4b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CategoryManager
+  - hash:
+      serializedVersion: 2
+      Hash: e6f0efd0e20669d577e9d21526b3d3f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: WarpTextExample
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -790,6 +1067,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: dd7520b7d4e690e8c593273e7b9fbe80
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
       Hash: c28c3c2df73a72331f72dd6d917cb2b6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -802,10 +1085,22 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 08ee418b801850b56a351565b9c8bb78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_TextEventHandler
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARFace
   - hash:
       serializedVersion: 2
       Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
@@ -814,22 +1109,82 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: cf629cc6f8365ceabcf3068b5221c52a
+      Hash: 47930f3b40e24ef5b3b5e3d9ada7097a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark01
+  - hash:
+      serializedVersion: 2
+      Hash: bd8e3d38b65ae6ebad5122cc4d2344ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManomotionUIManagment
+  - hash:
+      serializedVersion: 2
+      Hash: 217bfa83ad6c80fad9a0ff2887b8b268
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QrCodeButton
   - hash:
       serializedVersion: 2
-      Hash: cf629cc6f8365ceabcf3068b5221c52a
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARCore.dll
+    namespaceName: UnityEngine.XR.ARCore
+    className: ARCoreLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 217bfa83ad6c80fad9a0ff2887b8b268
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NavigationButton
   - hash:
       serializedVersion: 2
+      Hash: 1268406d3f2e4b2c2b670b560b6db769
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: AREnvironmentProbeManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1156e72c98526f1ff22111df12d1c2dc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuButton
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARParticipant
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: WaveVRHandEngine
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GestureInstruction
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Grayscale
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPlaneMeshVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARBackgroundRendererFeature
+  - hash:
+      serializedVersion: 2
+      Hash: 67f269c62dd53733976278fd9f3d1ad5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CubeSpawn
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -838,16 +1193,46 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARCore.dll
+    namespaceName: UnityEngine.XR.ARCore
+    className: ARCoreLoaderSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 49b69c471be81bffd46e9f6e93d0be5e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IconMainMenu
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 56fc8c88522abeb5e5ac99644613044e
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: VHTSettings
+      Hash: 3375c3d749f8f4cad889721b431bdc27
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: CameraController
+  - hash:
+      serializedVersion: 2
+      Hash: 9b292bf5b52dda241159711e8413bdbf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BoundingBoxUI
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexJitter
+  - hash:
+      serializedVersion: 2
+      Hash: d7a67e1cefa7266070d0ed675400fa19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExampleSpooky
   - hash:
       serializedVersion: 2
       Hash: 608722e9939bb48b72e35920b911d194
@@ -862,10 +1247,16 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: fe5a6fc508980841d35a517262a3d9d5
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: HandInputRayPointer
+      Hash: 1cbdcac84831a80a02c6c171e99f28cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TriggerGizmo
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloud
   - hash:
       serializedVersion: 2
       Hash: 45763c5633962fe4e7ad13b675515e66
@@ -874,10 +1265,22 @@ ScriptsOnlyBuild:
     className: DebugLogResizeListener
   - hash:
       serializedVersion: 2
+      Hash: 76c64fbbf279615bfe4acd0484ed4fbd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GizmoManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputManagerPhoneCamera
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -886,10 +1289,10 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
+      Hash: 3cae62e09a50c5d5aae8d0536b3d8fde
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatController
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -898,10 +1301,10 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 6a2ece2bce3a5c72664bad5a32fec8f8
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: HandInputModule
+      Hash: 7bb0c7d9d085d8ad5bce37decb3a23ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManomotionManager
   - hash:
       serializedVersion: 2
       Hash: c177d845c890e5dc67a7e67a8319dda8
@@ -910,22 +1313,52 @@ ScriptsOnlyBuild:
     className: ButtonSetElment
   - hash:
       serializedVersion: 2
+      Hash: 86e4e2c62d2a2b3347550251c912fc07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExampleDetectionCanvas
+  - hash:
+      serializedVersion: 2
+      Hash: 18624e1a5dfb4e13e9ed07462db50cc0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InstructionManoVisualization
+  - hash:
+      serializedVersion: 2
       Hash: 150d2705ec079b79d52ccce665aab8e1
     assemblyName: IngameDebugConsole.Runtime.dll
     namespaceName: IngameDebugConsole
     className: DebugLogPopup
   - hash:
       serializedVersion: 2
-      Hash: cf629cc6f8365ceabcf3068b5221c52a
+      Hash: 5459a6e15eb9ae02a9c2c27b97f046d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CubeGameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 217bfa83ad6c80fad9a0ff2887b8b268
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InformationButton
   - hash:
       serializedVersion: 2
-      Hash: cf629cc6f8365ceabcf3068b5221c52a
+      Hash: 217bfa83ad6c80fad9a0ff2887b8b268
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ConfigButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARFaceMeshVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: e244702e0dc05782229aa524e4d757f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -934,22 +1367,40 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 0535c7e7c34dd1cdfc5b1f8ffce1aebe
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARTrackedImageManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ConfigController
   - hash:
       serializedVersion: 2
-      Hash: 7bb3115704fd3b61b57afcf83752873d
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: HandRenderer
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloudParticleVisualizer
   - hash:
       serializedVersion: 2
-      Hash: 6fc03dc58c2d12001f5f5ebe8c44ea65
+      Hash: 864bcaca2f4771bc80aaaa9bb9ae7ccb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HowToAnimations
+  - hash:
+      serializedVersion: 2
+      Hash: 7e95a9a79c4acfa47327d84db327dc30
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExhibitionSceneApplication
+  - hash:
+      serializedVersion: 2
+      Hash: 11319334e5365797f8056694f9b5dae4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: ObjectSpin
   - hash:
       serializedVersion: 2
       Hash: 2d1e80f1a1db47d864013060fedab6c3
@@ -968,6 +1419,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 840e65a413cc46ebbbbf200f4362a70c
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARSession
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro
+    className: TMP_DigitValidator
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -1000,10 +1463,28 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextConsoleSimulator
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 62fef86270a167c41a606cfca1ecc156
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: ShaderPropAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -1012,10 +1493,88 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 79ab9283f2d487a4a457fdabb81a3f05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputManagerArFoundation
+  - hash:
+      serializedVersion: 2
+      Hash: 1d9b53318825332126b0fd6da2d962fb
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARAnchorManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InstructionVisualization
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARTrackedImage
+  - hash:
+      serializedVersion: 2
       Hash: 698ee8e8df65f02b2ae534f8cb52a856
     assemblyName: IngameDebugConsole.Runtime.dll
     namespaceName: IngameDebugConsole
     className: DebugLogItem
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartApplicationInstruction
+  - hash:
+      serializedVersion: 2
+      Hash: 6e8d7e948bf32cbecd2d972ff8ebfd54
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ManoMotion.TermsAndServices
+    className: PrivacyPolicyDisclaimair
+  - hash:
+      serializedVersion: 2
+      Hash: 274152c972478468d8321a977bbca8e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextInfoDebugTool
+  - hash:
+      serializedVersion: 2
+      Hash: bd3f0ca738703903e759f77536ed74fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_FrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: a1ca1237bad0f30ea5ba8f4060929114
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_TextSelector_B
+  - hash:
+      serializedVersion: 2
+      Hash: ca2a58dd7363525cbd2f65b2a150b41b
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARCameraManager
+  - hash:
+      serializedVersion: 2
+      Hash: 24c74cc0d527a06113f2b967042769f0
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEditor.XR.LegacyInputHelpers
+    className: CameraOffset
+  - hash:
+      serializedVersion: 2
+      Hash: d39905ff8fda75afed4d688761c322e1
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARFaceManager
   - hash:
       serializedVersion: 2
       Hash: 9b070fd11003a7ac517c876788f0fb2a
@@ -1030,10 +1589,40 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: bdee625372ff24ea11c92bdc66fb3c27
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: SingleHandGestureProducer
+      Hash: 57885f0dc9b07da426186cf1a7948b39
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GrabPass
+  - hash:
+      serializedVersion: 2
+      Hash: 16dacd04869a876ea4bea0d1d2e77e34
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloudManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DetectionInstruction
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ToggleGizmos
+  - hash:
+      serializedVersion: 2
+      Hash: 27e5341178f188b89bdc6495710b590c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark01_UGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ToggleVisualizationValues
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -1042,10 +1631,28 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: 8a874a8207a7664bdf44e61f28717254
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: SkewTextExample
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExhibitionSceneParameterPasser
+  - hash:
+      serializedVersion: 2
+      Hash: fe2d355deb0ca31d59a0a7cf4d141fc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: e1c35cdce946e9da77fe80a39c261608
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARSessionOrigin
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -1054,22 +1661,70 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextMeshSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: 13805df7cbd7434867f8e98bd8b12627
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExampleDetectionEdges
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexShakeB
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InfoDialog
   - hash:
       serializedVersion: 2
-      Hash: f973b98d115885bad817bce4d62cc62f
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: EditorHandSimulator
+      Hash: 5bb0c23ac2810973880e592724a69354
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: Benchmark02
   - hash:
       serializedVersion: 2
-      Hash: e855ac7b8118ab79ea5a62a9f58b428f
+      Hash: 088484a2e26f8b76fb40a47aa471e292
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainUIController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloudMeshVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: bd3f0ca738703903e759f77536ed74fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMP_UiFrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexColorCycler
+  - hash:
+      serializedVersion: 2
+      Hash: e63944317d2f5958e31963668bb29158
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexZoom
+  - hash:
+      serializedVersion: 2
+      Hash: 893dbdbfe611d62e230a686ea89f1efd
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1078,10 +1733,34 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 3da309352a1883dae2e14d71c432a803
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BWEffect
+  - hash:
+      serializedVersion: 2
+      Hash: cb1749a78eb5a2ba886fd9cea385a5af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HandCollider
+  - hash:
+      serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARInputManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1bc03a501323d00d0037a6b76d25a3ba
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARMeshManager
   - hash:
       serializedVersion: 2
       Hash: 5f1afab26586f4310783842d18c28473
@@ -1090,10 +1769,28 @@ ScriptsOnlyBuild:
     className: DebugLogManager
   - hash:
       serializedVersion: 2
-      Hash: 39cd4b4a0c12e9c578152bfaf6eb7492
+      Hash: e80c1450883443c68d6c2dade213536f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TMPro_InstructionOverlay
+  - hash:
+      serializedVersion: 2
+      Hash: 64af7643b65389ee32aa263616002ef9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ConfigSceneApplication
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TeleType
+  - hash:
+      serializedVersion: 2
+      Hash: c12f6929b034322884ced721fca65b10
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: TextMeshProFloatingText
   - hash:
       serializedVersion: 2
       Hash: 8f15c253902ff4eef507927669b9dc80
@@ -1108,6 +1805,24 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: 0784d4fd5b93bd75440d01eb2fac4233
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TMPro.Examples
+    className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: cbe6deff75fc0987595a61e9510f7917
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARCameraBackground
+  - hash:
+      serializedVersion: 2
+      Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnvMapAnimator
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1120,10 +1835,16 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: b5657e5f760d148ab6d313cfc4906e67
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: GestureProvider
+      Hash: bd5608fd86c6ec11b14f279acdc63819
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ManoMotion.HowToUse
+    className: HowToInstructor
+  - hash:
+      serializedVersion: 2
+      Hash: c468a65fb8986a83f58050d3e3097de0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ManoMotion.RunTime
+    className: RunTimeApplication
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -1132,10 +1853,22 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 01473135d671a71d740e507b04eb93da
+    assemblyName: Unity.XR.ARSubsystems.dll
+    namespaceName: UnityEngine.XR.ARSubsystems
+    className: XRReferenceImageLibrary
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: AREnvironmentProbe
   - hash:
       serializedVersion: 2
       Hash: 5dea360fb0b147724ac344e6f399c2f3
@@ -1150,16 +1883,16 @@ ScriptsOnlyBuild:
     className: RequestDialog
   - hash:
       serializedVersion: 2
-      Hash: 29aa11d547e5d3dc00ca4393edde7385
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: HandStateChecker
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 8ab9295d94483c961936d82d233d3df2
+    assemblyName: Unity.XR.Management.dll
+    namespaceName: UnityEngine.XR.Management
+    className: XRManagerSettings
   - hash:
       serializedVersion: 2
       Hash: 4e5a63ce0840833637ef5ccbddd1d963
@@ -1204,10 +1937,10 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: HTC.ViveHandTracking.dll
-    namespaceName: ViveHandTracking
-    className: EditorEngine
+      Hash: a3823f4de97e88e84da7c30aaa24b201
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnPoint
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1217,657 +1950,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPoseDriver
-  - hash:
-      serializedVersion: 2
-      Hash: 9b6303c7164a38e06044ec2036c18b6b
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARParticipantManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARRaycastManager
-  - hash:
-      serializedVersion: 2
-      Hash: 7f5c55cb7b3151ce240452eb85500d32
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPlaneManager
-  - hash:
-      serializedVersion: 2
-      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARAnchor
-  - hash:
-      serializedVersion: 2
-      Hash: e8733e39efa851172df1c9eaef062265
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPlane
-  - hash:
-      serializedVersion: 2
-      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARFace
-  - hash:
-      serializedVersion: 2
-      Hash: 1268406d3f2e4b2c2b670b560b6db769
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: AREnvironmentProbeManager
-  - hash:
-      serializedVersion: 2
-      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARParticipant
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPlaneMeshVisualizer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARBackgroundRendererFeature
-  - hash:
-      serializedVersion: 2
-      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPointCloud
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARFaceMeshVisualizer
-  - hash:
-      serializedVersion: 2
-      Hash: 0535c7e7c34dd1cdfc5b1f8ffce1aebe
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARTrackedImageManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPointCloudParticleVisualizer
-  - hash:
-      serializedVersion: 2
-      Hash: 840e65a413cc46ebbbbf200f4362a70c
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARSession
-  - hash:
-      serializedVersion: 2
-      Hash: 1d9b53318825332126b0fd6da2d962fb
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARAnchorManager
-  - hash:
-      serializedVersion: 2
-      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARTrackedImage
-  - hash:
-      serializedVersion: 2
-      Hash: ca2a58dd7363525cbd2f65b2a150b41b
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARCameraManager
-  - hash:
-      serializedVersion: 2
-      Hash: d39905ff8fda75afed4d688761c322e1
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARFaceManager
-  - hash:
-      serializedVersion: 2
-      Hash: 16dacd04869a876ea4bea0d1d2e77e34
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPointCloudManager
-  - hash:
-      serializedVersion: 2
-      Hash: e1c35cdce946e9da77fe80a39c261608
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARSessionOrigin
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARPointCloudMeshVisualizer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARInputManager
-  - hash:
-      serializedVersion: 2
-      Hash: 1bc03a501323d00d0037a6b76d25a3ba
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARMeshManager
-  - hash:
-      serializedVersion: 2
-      Hash: cbe6deff75fc0987595a61e9510f7917
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: ARCameraBackground
-  - hash:
-      serializedVersion: 2
-      Hash: 01473135d671a71d740e507b04eb93da
-    assemblyName: Unity.XR.ARSubsystems.dll
-    namespaceName: UnityEngine.XR.ARSubsystems
-    className: XRReferenceImageLibrary
-  - hash:
-      serializedVersion: 2
-      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
-    assemblyName: Unity.XR.ARFoundation.dll
-    namespaceName: UnityEngine.XR.ARFoundation
-    className: AREnvironmentProbe
-  - hash:
-      serializedVersion: 2
-      Hash: 04e4a8b0447477cc4e933d9e5311188f
-    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
-    namespaceName: UnityEngine.XR.LegacyInputHelpers
-    className: ArmModel
-  - hash:
-      serializedVersion: 2
-      Hash: 98aa0a0c8ff2910eb12af89c7e0eb661
-    assemblyName: Unity.XR.Management.dll
-    namespaceName: UnityEngine.XR.Management
-    className: XRGeneralSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
-    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
-    namespaceName: UnityEngine.XR.LegacyInputHelpers
-    className: TransitionArmModel
-  - hash:
-      serializedVersion: 2
-      Hash: d251bf88db6c95a6b1aa0b69298da9ef
-    assemblyName: UnityEngine.SpatialTracking.dll
-    namespaceName: UnityEngine.SpatialTracking
-    className: TrackedPoseDriver
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARCore.dll
-    namespaceName: UnityEngine.XR.ARCore
-    className: ARCoreLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARCore.dll
-    namespaceName: UnityEngine.XR.ARCore
-    className: ARCoreLoaderSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 24c74cc0d527a06113f2b967042769f0
-    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
-    namespaceName: UnityEditor.XR.LegacyInputHelpers
-    className: CameraOffset
-  - hash:
-      serializedVersion: 2
-      Hash: 893dbdbfe611d62e230a686ea89f1efd
-    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
-    namespaceName: UnityEngine.XR.LegacyInputHelpers
-    className: SwingArmModel
-  - hash:
-      serializedVersion: 2
-      Hash: 8ab9295d94483c961936d82d233d3df2
-    assemblyName: Unity.XR.Management.dll
-    namespaceName: UnityEngine.XR.Management
-    className: XRManagerSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 18624e1a5dfb4e13e9ed07462db50cc0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ManoVisualization
-  - hash:
-      serializedVersion: 2
-      Hash: 60f3f125226e96dca38d34c27dd37973
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ManoMotion.UI.Buttons
-    className: UIIconBehavior
-  - hash:
-      serializedVersion: 2
-      Hash: b7fa2d96b1ca446bfca517aad7a48823
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ManoUtils
-  - hash:
-      serializedVersion: 2
-      Hash: 3d7fd2c77df46a81ff5ed68639554ea6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ApplicationManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro
-    className: TMP_PhoneNumberValidator
-  - hash:
-      serializedVersion: 2
-      Hash: 18441cc3abdcbaa4a26095fc6d530500
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ManoEvents
-  - hash:
-      serializedVersion: 2
-      Hash: eb209657734b3f197394254e7a1fbbcc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ARCubeInteraction
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HandSideInstruction
-  - hash:
-      serializedVersion: 2
-      Hash: 7abad2676cd1818f8e82e720f2631fb8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Category
-  - hash:
-      serializedVersion: 2
-      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: Benchmark03
-  - hash:
-      serializedVersion: 2
-      Hash: 00bfd7cc5ebc89d52df71777a198a4b4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CategoryManager
-  - hash:
-      serializedVersion: 2
-      Hash: e6f0efd0e20669d577e9d21526b3d3f9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: WarpTextExample
-  - hash:
-      serializedVersion: 2
-      Hash: dd7520b7d4e690e8c593273e7b9fbe80
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_TextEventCheck
-  - hash:
-      serializedVersion: 2
-      Hash: 08ee418b801850b56a351565b9c8bb78
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro
-    className: TMP_TextEventHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 47930f3b40e24ef5b3b5e3d9ada7097a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: Benchmark01
-  - hash:
-      serializedVersion: 2
-      Hash: bd8e3d38b65ae6ebad5122cc4d2344ae
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ManomotionUIManagment
-  - hash:
-      serializedVersion: 2
-      Hash: 1156e72c98526f1ff22111df12d1c2dc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuButton
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GestureInstruction
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Grayscale
-  - hash:
-      serializedVersion: 2
-      Hash: 67f269c62dd53733976278fd9f3d1ad5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CubeSpawn
-  - hash:
-      serializedVersion: 2
-      Hash: 49b69c471be81bffd46e9f6e93d0be5e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: IconMainMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 3375c3d749f8f4cad889721b431bdc27
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: CameraController
-  - hash:
-      serializedVersion: 2
-      Hash: 9b292bf5b52dda241159711e8413bdbf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BoundingBoxUI
-  - hash:
-      serializedVersion: 2
-      Hash: e63944317d2f5958e31963668bb29158
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: VertexJitter
-  - hash:
-      serializedVersion: 2
-      Hash: d7a67e1cefa7266070d0ed675400fa19
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExampleSpooky
-  - hash:
-      serializedVersion: 2
-      Hash: 1cbdcac84831a80a02c6c171e99f28cf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TriggerGizmo
-  - hash:
-      serializedVersion: 2
-      Hash: 76c64fbbf279615bfe4acd0484ed4fbd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GizmoManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InputManagerPhoneCamera
-  - hash:
-      serializedVersion: 2
-      Hash: 3cae62e09a50c5d5aae8d0536b3d8fde
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChatController
-  - hash:
-      serializedVersion: 2
-      Hash: 7bb0c7d9d085d8ad5bce37decb3a23ad
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ManomotionManager
-  - hash:
-      serializedVersion: 2
-      Hash: 86e4e2c62d2a2b3347550251c912fc07
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExampleDetectionCanvas
-  - hash:
-      serializedVersion: 2
-      Hash: 18624e1a5dfb4e13e9ed07462db50cc0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InstructionManoVisualization
-  - hash:
-      serializedVersion: 2
-      Hash: 5459a6e15eb9ae02a9c2c27b97f046d2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CubeGameManager
-  - hash:
-      serializedVersion: 2
-      Hash: e244702e0dc05782229aa524e4d757f5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_ExampleScript_01
-  - hash:
-      serializedVersion: 2
-      Hash: 864bcaca2f4771bc80aaaa9bb9ae7ccb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HowToAnimations
-  - hash:
-      serializedVersion: 2
-      Hash: 11319334e5365797f8056694f9b5dae4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: ObjectSpin
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro
-    className: TMP_DigitValidator
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TextConsoleSimulator
-  - hash:
-      serializedVersion: 2
-      Hash: 62fef86270a167c41a606cfca1ecc156
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: ShaderPropAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_TextSelector_A
-  - hash:
-      serializedVersion: 2
-      Hash: 79ab9283f2d487a4a457fdabb81a3f05
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InputManagerArFoundation
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InstructionVisualization
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: SimpleScript
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StartApplicationInstruction
-  - hash:
-      serializedVersion: 2
-      Hash: 6e8d7e948bf32cbecd2d972ff8ebfd54
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ManoMotion.TermsAndServices
-    className: PrivacyPolicyDisclaimair
-  - hash:
-      serializedVersion: 2
-      Hash: 274152c972478468d8321a977bbca8e3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_TextInfoDebugTool
-  - hash:
-      serializedVersion: 2
-      Hash: bd3f0ca738703903e759f77536ed74fd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_FrameRateCounter
-  - hash:
-      serializedVersion: 2
-      Hash: a1ca1237bad0f30ea5ba8f4060929114
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_TextSelector_B
-  - hash:
-      serializedVersion: 2
-      Hash: 57885f0dc9b07da426186cf1a7948b39
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GrabPass
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DetectionInstruction
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ToggleGizmos
-  - hash:
-      serializedVersion: 2
-      Hash: 27e5341178f188b89bdc6495710b590c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: Benchmark01_UGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ToggleVisualizationValues
-  - hash:
-      serializedVersion: 2
-      Hash: 8a874a8207a7664bdf44e61f28717254
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: SkewTextExample
-  - hash:
-      serializedVersion: 2
-      Hash: fe2d355deb0ca31d59a0a7cf4d141fc3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: Benchmark04
-  - hash:
-      serializedVersion: 2
-      Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TextMeshSpawner
-  - hash:
-      serializedVersion: 2
-      Hash: 13805df7cbd7434867f8e98bd8b12627
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExampleDetectionEdges
-  - hash:
-      serializedVersion: 2
-      Hash: e63944317d2f5958e31963668bb29158
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: VertexShakeB
-  - hash:
-      serializedVersion: 2
-      Hash: 5bb0c23ac2810973880e592724a69354
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: Benchmark02
-  - hash:
-      serializedVersion: 2
-      Hash: bd3f0ca738703903e759f77536ed74fd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMP_UiFrameRateCounter
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: VertexColorCycler
-  - hash:
-      serializedVersion: 2
-      Hash: e63944317d2f5958e31963668bb29158
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: VertexZoom
-  - hash:
-      serializedVersion: 2
-      Hash: 3da309352a1883dae2e14d71c432a803
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BWEffect
-  - hash:
-      serializedVersion: 2
-      Hash: cb1749a78eb5a2ba886fd9cea385a5af
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HandCollider
-  - hash:
-      serializedVersion: 2
-      Hash: e80c1450883443c68d6c2dade213536f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TMPro_InstructionOverlay
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TeleType
-  - hash:
-      serializedVersion: 2
-      Hash: c12f6929b034322884ced721fca65b10
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: TextMeshProFloatingText
-  - hash:
-      serializedVersion: 2
-      Hash: 0784d4fd5b93bd75440d01eb2fac4233
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TMPro.Examples
-    className: VertexShakeA
-  - hash:
-      serializedVersion: 2
-      Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnvMapAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: bd5608fd86c6ec11b14f279acdc63819
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ManoMotion.HowToUse
-    className: HowToInstructor
-  - hash:
-      serializedVersion: 2
-      Hash: c468a65fb8986a83f58050d3e3097de0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ManoMotion.RunTime
-    className: RunTimeApplication
-  - hash:
-      serializedVersion: 2
-      Hash: a3823f4de97e88e84da7c30aaa24b201
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnPoint
+    className: DontDestroyOnLoad
   platform: 13
   scenePathNames:
   - Assets/Scenes/Initialize.unity
@@ -1875,4 +1960,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/QrCode.unity
   - Assets/Scenes/Exhibition.unity
   - Assets/Scenes/Config.unity
-  playerPath: C:/Users/MikawaHeiya/My_Library/Document/Source/Unity/VirtualMuseum/Release/test.apk
+  - Assets/Manomotion/Examples/Detection/Detection.unity
+  playerPath: C:/Users/MikawaHeiya/home/document/source/Unity/VirtualMuseum/Release/test.apk

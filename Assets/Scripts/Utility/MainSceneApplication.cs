@@ -7,24 +7,18 @@ public class MainSceneApplication : MonoBehaviour
     public GameObject loginDialogPrefab;
     public GameObject requestDialogPrefab;
     public GameObject infoDialog;
-    public GameObject mainCamera;
     public GameObject canvas;
     public GameObject loading;
     public UserButton userButton;
 
     public UserInfo User { get; private set; }
-    public ConfigController configController { get; private set; }
 
     public event System.Action<UserInfo> UserLogined;
     public event System.Action UserLogouted;
 
     private void Start()
     {
-#if !UNITY_EDITOR
-        mainCamera.AddComponent<ViveHandTracking.GestureProvider>();
-#endif
         FindObjectOfType<SceneLoader>().loading = loading;
-        configController = FindObjectOfType<ConfigController>();
 
         loading.SetActive(false);
     }

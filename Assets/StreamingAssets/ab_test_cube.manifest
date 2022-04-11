@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3160328154
+CRC: 3057780890
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2696fc4e746d88088d500e3c8556d723
+    Hash: 16de797c9d7862e0651b1a8cc6837179
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6ff44203e3102b52b3a107fbcde72996
+    Hash: d0c920e7f5ea5b33d594b875e04cf8af
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -41,14 +41,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers:
-- AssemblyName: UnityEngine.CoreModule
-  ClassName: UnityEngine.Events.PersistentCallGroup
-- AssemblyName: UnityEngine.UI
-  ClassName: UnityEngine.UI.FontData
-- AssemblyName: UnityEngine.UI
-  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs/ab/ab_test_cube.prefab
 - Assets/Prefabs/ab/ab_test_cube_info.prefab
+- Assets/Prefabs/ab/ab_test_cube.prefab
 Dependencies: []

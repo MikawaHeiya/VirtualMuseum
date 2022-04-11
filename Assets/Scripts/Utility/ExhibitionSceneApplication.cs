@@ -5,8 +5,6 @@ using UnityEngine;
 public class ExhibitionSceneApplication : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject cameraAnchor;
-    public GameObject mainCamera;
     public Vector3 defaultCameraVector;
     public GameObject rotateModeUI;
     public GameObject rotateModeIcon;
@@ -15,23 +13,22 @@ public class ExhibitionSceneApplication : MonoBehaviour
 
     private GameObject exhibitor = null;
     private GameObject exhibitorInfo = null;
-    private InputUtil inputUtil;
     private SceneLoader sceneLoader;
     private bool rotateMode = true;
+    private float scaleFix = 1f;
 
     private void Start()
     {
         var assetBundleInfo = FindObjectOfType<ExhibitionSceneParameterPasser>().assetBundleInfo;
         StartCoroutine(LoadFromURL(assetBundleInfo.url, assetBundleInfo.name));
 
-        inputUtil = FindObjectOfType<InputUtil>();
         sceneLoader = FindObjectOfType<SceneLoader>();
         sceneLoader.loading = loading;
     }
 
     private void Update()
     {   
-        if (inputUtil.NextInputEntered)
+        if (InputUtil.NextInputEntered)
         {
             rotateMode = !rotateMode;
             rotateModeIcon.SetActive(rotateMode);
@@ -43,21 +40,23 @@ public class ExhibitionSceneApplication : MonoBehaviour
         {
             //cameraAnchor.transform.position = exhibitor.transform.position;
 
-            if (inputUtil.RotateInputStayed)
+            if (InputUtil.RotateInputStayed)
             {
                 if (rotateMode)
                 {
-                    exhibitor.transform.rotation = inputUtil.RotateInput;
+                    exhibitor.transform.rotation = Quaternion.Euler(new Vector3(InputUtil.RotateInput.y * 360f, InputUtil.RotateInput.x * 360f, 0f));
                 }
                 else
                 {
-                    if (inputUtil.RotateInput.eulerAngles.y > 60)
+                    if (InputUtil.RotateInput.x > 0.5f)
                     {
-                        mainCamera.transform.position *= (1f - 0.1f * Time.deltaTime);
+                        exhibitor.transform.position = new Vector3(0f, 0f, 
+                            exhibitor.transform.position.z + scaleFix * Time.deltaTime);
                     }
                     else
                     {
-                        mainCamera.transform.position /= (1f - 0.1f * Time.deltaTime);
+                        exhibitor.transform.position = new Vector3(0f, 0f,
+                            exhibitor.transform.position.z - scaleFix * Time.deltaTime);
                     }
                 }
             }
@@ -72,7 +71,7 @@ public class ExhibitionSceneApplication : MonoBehaviour
         var bundle = UnityEngine.Networking.DownloadHandlerAssetBundle.GetContent(request);
         var obj = bundle.LoadAsset<GameObject>(name);
         var objInfo = bundle.LoadAsset<GameObject>(name + "_info");
-        exhibitor =  Instantiate(obj, new Vector3(0, 0, 0), obj.transform.rotation);
+        exhibitor =  Instantiate(obj, new Vector3(0, 0, 5), obj.transform.rotation);
         exhibitorInfo = Instantiate(objInfo, canvas.transform);
     }
 

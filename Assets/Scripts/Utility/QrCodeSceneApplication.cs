@@ -12,6 +12,7 @@ public struct AssetBundleInfo
 
 public class QrCodeSceneApplication : MonoBehaviour
 {
+    public Camera mainCamera;
     public UnityEngine.UI.RawImage rawImage;
     public UnityEngine.UI.Text text;
     public GameObject requestDialogPrefab;
@@ -25,28 +26,30 @@ public class QrCodeSceneApplication : MonoBehaviour
     private BarcodeReader reader = new BarcodeReader();
 
     private SceneLoader sceneLoader;
-    private ConfigController configController;
+    private GameObject ar;
 
     private AssetBundleInfo assetBundleInfo;
 
     public void OnInstantieteButtonClicked()
     {
+        mainCamera.gameObject.SetActive(false);
+        ar.SetActive(true);
         parameterPasser.assetBundleInfo = assetBundleInfo;
         sceneLoader.LoadScene(3);
     }
 
     private void Start()
     {
+        ar = FindObjectOfType<DontDestroyOnLoad>().gameObject;
+        ar.SetActive(false);
+        mainCamera.gameObject.SetActive(true);
+
         loading.SetActive(false);
 
         StartCoroutine(InitializeCamera());
 
-        //var config = FindObjectOfType<ConfigController>();
-
         sceneLoader = FindObjectOfType<SceneLoader>();
         sceneLoader.loading = loading;
-
-        configController = FindObjectOfType<ConfigController>();
     }
 
     private IEnumerator InitializeCamera()
@@ -66,6 +69,7 @@ public class QrCodeSceneApplication : MonoBehaviour
                 if (!device.isFrontFacing)
                 {
                     webCamTexture = new WebCamTexture(device.name, 800, 800, 60);
+                    Debug.Log(device.name);
                     break;
                 }
             }
@@ -82,9 +86,9 @@ public class QrCodeSceneApplication : MonoBehaviour
 
     private IEnumerator Scan()
     {
-        yield return new WaitForSeconds(1f / configController.Config.QrCodeCameraFlushFrequency);
+        yield return new WaitForSeconds(1f / ConfigController.Config.QrCodeCameraFlushFrequency);
         yield return new WaitForEndOfFrame();
-
+        
         var result = reader.Decode(webCamTexture.GetPixels32(), webCamTexture.width, webCamTexture.height);
 
         if (result == null)
@@ -112,6 +116,8 @@ public class QrCodeSceneApplication : MonoBehaviour
 
     public void OnBackButtonClicked()
     {
+        mainCamera.gameObject.SetActive(false);
+        ar.SetActive(true);
         sceneLoader.LoadScene(1);
     }
 }

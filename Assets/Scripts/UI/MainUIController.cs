@@ -7,8 +7,6 @@ public class MainUIController : MonoBehaviour
     public List<ButtonSetElment> buttons;
     public int defaultHighlightButton;
 
-    public InputUtil inputUtil;
-
     private int currentHighlightButton = 0;
     public int HighlightButton
     {
@@ -29,11 +27,11 @@ public class MainUIController : MonoBehaviour
 
     private void Update()
     {
-        if (inputUtil.NextInputEntered)
+        if (InputUtil.NextInputEntered)
         {
             ++HighlightButton;
         }
-        else if (inputUtil.ClickInputEntened)
+        else if (InputUtil.ClickInputEntened)
         {
             buttons[HighlightButton].GetComponent<ButtonClick>().OnButtonClicked();
         }

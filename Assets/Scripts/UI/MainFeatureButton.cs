@@ -5,12 +5,8 @@ using UnityEngine;
 public class MainFeatureButton : MonoBehaviour
 {
     public MainUIController mainUIController;
-
+    
     public UnityEngine.UI.Image buttonBackground;
-    public UnityEngine.UI.Image buttonIcon;
-
-    public UnityEngine.UI.Text buttonText;
-    public string displayText;
 
     private void Awake()
     {
@@ -24,23 +20,16 @@ public class MainFeatureButton : MonoBehaviour
 
     public void OnButtonFocused()
     {
-        buttonBackground.color = new Color(135 / 255f, 206 / 255f, 235 / 255f, 255 / 255f);
-        buttonIcon.color = new Color(1f, 1f, 1f, 1f);
-
-        buttonText.text = displayText;
+        buttonBackground.enabled = true;
     }
 
     public void OnButtonUnFocused()
     {
-        buttonBackground.color = new Color(1f, 1f, 1f, 1f);
-        buttonIcon.color = new Color(19 / 255f, 19 / 255f, 19 / 255f, 1f);
-
-        buttonText.text = "";
+        buttonBackground.enabled = false;
     }
 
     public virtual void OnButtonClicked() 
     {
         mainUIController.HighlightButton = GetComponent<ButtonSetElment>().buttonIndex;
-        Debug.Log(displayText + " clicked");
     }
 }
