@@ -338,7 +338,6 @@ namespace UnityEngine.UI
         private List<DropdownItem> m_Items = new List<DropdownItem>();
         private TweenRunner<FloatTween> m_AlphaTweenRunner;
         private bool validTemplate = false;
-        private const int kHighSortingLayer = 30000;
 
         private static OptionData s_NoOptionData = new OptionData();
 
@@ -429,6 +428,9 @@ namespace UnityEngine.UI
             if (!Application.isPlaying)
                 return;
             #endif
+
+            m_AlphaTweenRunner = new TweenRunner<FloatTween>();
+            m_AlphaTweenRunner.Init(this);
 
             if (m_CaptionImage)
                 m_CaptionImage.enabled = (m_CaptionImage.sprite != null);
@@ -550,8 +552,7 @@ namespace UnityEngine.UI
         /// </example>
         public void AddOptions(List<string> options)
         {
-            var optionsCount = options.Count;
-            for (int i = 0; i < optionsCount; i++)
+            for (int i = 0; i < options.Count; i++)
                 this.options.Add(new OptionData(options[i]));
             RefreshShownValue();
         }
@@ -565,8 +566,7 @@ namespace UnityEngine.UI
         /// </remarks>
         public void AddOptions(List<Sprite> options)
         {
-            var optionsCount = options.Count;
-            for (int i = 0; i < optionsCount; i++)
+            for (int i = 0; i < options.Count; i++)
                 this.options.Add(new OptionData(options[i]));
             RefreshShownValue();
         }
@@ -581,7 +581,7 @@ namespace UnityEngine.UI
             RefreshShownValue();
         }
 
-        private void SetupTemplate(Canvas rootCanvas)
+        private void SetupTemplate()
         {
             validTemplate = false;
 
@@ -641,15 +641,9 @@ namespace UnityEngine.UI
                 parentTransform = parentTransform.parent;
             }
 
-            // checks if a Canvas already exists before overriding it. (case 958281 - [UI] Child Canvas' Sorting Layer is changed to the same value as the parent)
-            if (!templateGo.TryGetComponent<Canvas>(out _))
-            {
-                Canvas popupCanvas = templateGo.AddComponent<Canvas>();
-                popupCanvas.overrideSorting = true;
-                popupCanvas.sortingOrder = kHighSortingLayer;
-                // popupCanvas used to assume the root canvas had the default sorting Layer, next line fixes (case 958281 - [UI] Dropdown list does not copy the parent canvas layer when the panel is opened)
-                popupCanvas.sortingLayerID = rootCanvas.sortingLayerID;
-            }
+            Canvas popupCanvas = GetOrAddComponent<Canvas>(templateGo);
+            popupCanvas.overrideSorting = true;
+            popupCanvas.sortingOrder = 30000;
 
             // If we have a parent canvas, apply the same raycasters as the parent for consistency.
             if (parentCanvas != null)
@@ -735,11 +729,10 @@ namespace UnityEngine.UI
                 return;
 
             // case 1064466 rootCanvas should be last element returned by GetComponentsInParent()
-            var listCount = list.Count;
-            Canvas rootCanvas = list[listCount - 1];
-            for (int i = 0; i < listCount; i++)
+            Canvas rootCanvas = list[list.Count - 1];
+            for (int i = 0; i < list.Count; i++)
             {
-                if (list[i].isRootCanvas || list[i].overrideSorting)
+                if (list[i].isRootCanvas)
                 {
                     rootCanvas = list[i];
                     break;
@@ -750,13 +743,15 @@ namespace UnityEngine.UI
 
             if (!validTemplate)
             {
-                SetupTemplate(rootCanvas);
+                SetupTemplate();
                 if (!validTemplate)
                     return;
             }
 
             m_Template.gameObject.SetActive(true);
 
+            // popupCanvas used to assume the root canvas had the default sorting Layer, next line fixes (case 958281 - [UI] Dropdown list does not copy the parent canvas layer when the panel is opened)
+            m_Template.GetComponent<Canvas>().sortingLayerID = rootCanvas.sortingLayerID;
 
             // Instantiate the drop-down template
             m_Dropdown = CreateDropdownList(m_Template.gameObject);
@@ -788,8 +783,7 @@ namespace UnityEngine.UI
             m_Items.Clear();
 
             Toggle prev = null;
-            var optionsCount = options.Count;
-            for (int i = 0; i < optionsCount; ++i)
+            for (int i = 0; i < options.Count; ++i)
             {
                 OptionData data = options[i];
                 DropdownItem item = AddItem(data, value == i, itemTemplate, m_Items);
@@ -857,13 +851,12 @@ namespace UnityEngine.UI
                     RectTransformUtility.FlipLayoutOnAxis(dropdownRectTransform, axis, false, false);
             }
 
-            var itemsCount = m_Items.Count;
-            for (int i = 0; i < itemsCount; i++)
+            for (int i = 0; i < m_Items.Count; i++)
             {
                 RectTransform itemRect = m_Items[i].rectTransform;
                 itemRect.anchorMin = new Vector2(itemRect.anchorMin.x, 0);
                 itemRect.anchorMax = new Vector2(itemRect.anchorMax.x, 0);
-                itemRect.anchoredPosition = new Vector2(itemRect.anchoredPosition.x, offsetMin.y + itemSize.y * (itemsCount - 1 - i) + itemSize.y * itemRect.pivot.y);
+                itemRect.anchoredPosition = new Vector2(itemRect.anchoredPosition.x, offsetMin.y + itemSize.y * (m_Items.Count - 1 - i) + itemSize.y * itemRect.pivot.y);
                 itemRect.sizeDelta = new Vector2(itemRect.sizeDelta.x, itemSize.y);
             }
 
@@ -1089,8 +1082,7 @@ namespace UnityEngine.UI
 
         private void ImmediateDestroyDropdownList()
         {
-            var itemsCount = m_Items.Count;
-            for (int i = 0; i < itemsCount; i++)
+            for (int i = 0; i < m_Items.Count; i++)
             {
                 if (m_Items[i] != null)
                     DestroyItem(m_Items[i]);

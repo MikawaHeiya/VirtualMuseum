@@ -26,6 +26,7 @@ namespace UnityEditor._2D.Sprite.Editor
         ReorderableList m_ReorderableList;
         Vector2 m_ReorderableListScrollPosition;
         string[] m_SuggestedNames;
+
         private IMGUIContainer m_SecondaryTextureInspectorContainer;
         internal List<SecondarySpriteTexture> secondaryTextureList { get; private set; }
 
@@ -58,7 +59,7 @@ namespace UnityEditor._2D.Sprite.Editor
             return dataProvider != null && dataProvider.spriteImportMode != SpriteImportMode.None;
         }
 
-        public override void DoPostGUI()
+        public override void DoMainGUI()
         {
         }
 
@@ -79,13 +80,29 @@ namespace UnityEditor._2D.Sprite.Editor
                 if (e.type == EventType.MouseDown && e.button == 0)
                 {
                     m_ReorderableList.index = -1;
-                    OnSelectCallback(m_ReorderableList);
                     spriteEditor.RequestRepaint();
                 }
             }
+
+            // Preview the current selected secondary texture.
+            Texture2D previewTexture = null;
+            int width = 0, height = 0;
+
+            var textureDataProvider = spriteEditor.GetDataProvider<ITextureDataProvider>();
+            if (textureDataProvider != null)
+            {
+                previewTexture = textureDataProvider.previewTexture;
+                textureDataProvider.GetTextureActualWidthAndHeight(out width, out height);
+            }
+
+            if (m_ReorderableList.index >= 0 && m_ReorderableList.index < secondaryTextureList.Count)
+                previewTexture = secondaryTextureList[m_ReorderableList.index].texture;
+
+            if (previewTexture != null)
+                spriteEditor.SetPreviewTexture(previewTexture, width, height);
         }
 
-        public override void DoMainGUI()
+        public override void DoPostGUI()
         {
         }
 
@@ -105,7 +122,6 @@ namespace UnityEditor._2D.Sprite.Editor
             m_ReorderableList.onRemoveCallback = RemoveSpriteSecondaryTextureElement;
             m_ReorderableList.onCanAddCallback = CanAddSpriteSecondaryTextureElement;
             m_ReorderableList.elementHeightCallback = (int index) => (EditorGUIUtility.singleLineHeight * 3) + 5;
-            m_ReorderableList.onSelectCallback = OnSelectCallback;
 
             spriteEditor.selectedSpriteRect = null;
 
@@ -140,29 +156,17 @@ namespace UnityEditor._2D.Sprite.Editor
             spriteEditor.GetMainVisualContainer().Add(m_SecondaryTextureInspectorContainer);
         }
 
-        void OnSelectCallback(ReorderableList list)
-        {
-            // Preview the current selected secondary texture.
-            Texture2D previewTexture = null;
-            int width = 0, height = 0;
-
-            var textureDataProvider = spriteEditor.GetDataProvider<ITextureDataProvider>();
-            if (textureDataProvider != null)
-            {
-                previewTexture = textureDataProvider.previewTexture;
-                textureDataProvider.GetTextureActualWidthAndHeight(out width, out height);
-            }
-
-            if (m_ReorderableList.index >= 0 && m_ReorderableList.index < secondaryTextureList.Count)
-                previewTexture = secondaryTextureList[m_ReorderableList.index].texture;
-
-            if (previewTexture != null)
-                spriteEditor.SetPreviewTexture(previewTexture, width, height);
-        }
-
         public override void OnModuleDeactivate()
         {
-            DisplayMainTexture();
+            // Reset to display the main texture.
+            ITextureDataProvider textureDataProvider = spriteEditor.GetDataProvider<ITextureDataProvider>();
+            if (textureDataProvider != null && textureDataProvider.previewTexture != null)
+            {
+                Texture2D mainTexture = textureDataProvider.previewTexture;
+                int width = 0, height = 0;
+                textureDataProvider.GetTextureActualWidthAndHeight(out width, out height);
+                spriteEditor.SetPreviewTexture(mainTexture, width, height);
+            }
             if (spriteEditor.GetMainVisualContainer().Contains(m_SecondaryTextureInspectorContainer))
                 spriteEditor.GetMainVisualContainer().Remove(m_SecondaryTextureInspectorContainer);
         }
@@ -177,7 +181,7 @@ namespace UnityEditor._2D.Sprite.Editor
             // "Name" text field
             EditorGUI.BeginChangeCheck();
             var r = new Rect(rect.x, rect.y + 5, rect.width - Styles.textFieldDropDownWidth, EditorGUIUtility.singleLineHeight);
-            string newName = EditorGUI.TextField(r, Styles.name, secondaryTexture.name);
+            string newName = EditorGUI.DelayedTextField(r, Styles.name, secondaryTexture.name);
             dataModified = EditorGUI.EndChangeCheck();
 
             // Suggested names
@@ -228,7 +232,6 @@ namespace UnityEditor._2D.Sprite.Editor
 
         void RemoveSpriteSecondaryTextureElement(ReorderableList list)
         {
-            DisplayMainTexture();
             secondaryTextureList.RemoveAt(list.index);
             spriteEditor.SetDataModified();
         }
@@ -236,18 +239,6 @@ namespace UnityEditor._2D.Sprite.Editor
         bool CanAddSpriteSecondaryTextureElement(ReorderableList list)
         {
             return list.count < 8;
-        }
-
-        void DisplayMainTexture()
-        {
-            ITextureDataProvider textureDataProvider = spriteEditor.GetDataProvider<ITextureDataProvider>();
-            if (textureDataProvider != null && textureDataProvider.previewTexture != null)
-            {
-                Texture2D mainTexture = textureDataProvider.previewTexture;
-                int width = 0, height = 0;
-                textureDataProvider.GetTextureActualWidthAndHeight(out width, out height);
-                spriteEditor.SetPreviewTexture(mainTexture, width, height);
-            }
         }
     }
 }

@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.easyar.sense": {
-      "version": "file:C:/Users/MikawaHeiya/My_Library/Document/Source/Unity/com.easyar.sense-4.4.0+2424.469da7da.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0"
-      }
-    },
     "com.htc.upm.vivehandtracking": {
       "version": "1.0.0",
       "depth": 0,
@@ -22,12 +14,10 @@
       "dependencies": {}
     },
     "com.unity.collab-proxy": {
-      "version": "1.15.12",
+      "version": "1.14.16",
       "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.unity.services.core": "1.0.1"
-      },
+      "dependencies": {},
       "url": "https://packages.unity.cn"
     },
     "com.unity.ext.nunit": {
@@ -38,7 +28,7 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.ide.rider": {
-      "version": "2.0.7",
+      "version": "1.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -62,17 +52,15 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
-    "com.unity.services.core": {
-      "version": "1.0.1",
-      "depth": 1,
+    "com.unity.subsystemregistration": {
+      "version": "1.0.6",
+      "depth": 2,
       "source": "registry",
-      "dependencies": {
-        "com.unity.modules.unitywebrequest": "1.0.0"
-      },
+      "dependencies": {},
       "url": "https://packages.unity.cn"
     },
     "com.unity.test-framework": {
-      "version": "1.1.29",
+      "version": "1.1.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -83,7 +71,7 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.6",
+      "version": "2.1.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -92,7 +80,7 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.timeline": {
-      "version": "1.4.8",
+      "version": "1.2.18",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -111,6 +99,58 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.xr.arcore": {
+      "version": "3.1.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.arsubsystems": "3.1.3",
+        "com.unity.xr.management": "3.0.6",
+        "com.unity.modules.androidjni": "1.0.0"
+      },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.xr.arfoundation": {
+      "version": "3.1.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.arsubsystems": "3.1.3"
+      },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.xr.arsubsystems": {
+      "version": "3.1.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.subsystemregistration": "1.0.6"
+      },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.xr.legacyinputhelpers": {
+      "version": "2.1.8",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.xr.management": {
+      "version": "4.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.7",
+        "com.unity.subsystemregistration": "1.0.6"
+      },
+      "url": "https://packages.unity.cn"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
@@ -258,18 +298,6 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.modules.ui": "1.0.0",
-        "com.unity.modules.imgui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.uielementsnative": "1.0.0"
-      }
-    },
-    "com.unity.modules.uielementsnative": {
-      "version": "1.0.0",
-      "depth": 1,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
