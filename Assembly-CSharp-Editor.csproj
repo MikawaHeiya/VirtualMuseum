@@ -685,9 +685,6 @@
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="HTC.ViveHandTracking">
-      <HintPath>Library\ScriptAssemblies\HTC.ViveHandTracking.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>

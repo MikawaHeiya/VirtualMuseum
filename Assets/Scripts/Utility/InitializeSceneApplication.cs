@@ -17,8 +17,8 @@ public class InitializeSceneApplication : MonoBehaviour
     }
 
     private async void Initialize()
-    {
-#if UNITY_EDITOR
+    {/*
+#if !UNITY_EDITOR
         if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
         {
             Permission.RequestUserPermission(Permission.ExternalStorageRead);
@@ -31,7 +31,7 @@ public class InitializeSceneApplication : MonoBehaviour
         {
             Permission.RequestUserPermission(Permission.Camera);
         }
-#endif
+#endif*/
         await ConfigController.ReadConfig();
         if (ConfigController.Config.ShowDebugConsole)
         {

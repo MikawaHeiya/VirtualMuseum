@@ -633,11 +633,11 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Users\MikawaHeiya\home\binary\install\Unity\Editor\2019.4.37f1c1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

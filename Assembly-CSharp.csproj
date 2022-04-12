@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\UI\ConfigButton.cs" />
     <Compile Include="Assets\Scripts\UI\InfoDialog.cs" />
     <Compile Include="Assets\Scripts\UI\InformationButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ListUIContentAnimate.cs" />
     <Compile Include="Assets\Scripts\UI\LoginDialog.cs" />
     <Compile Include="Assets\Scripts\UI\MainFeatureButton.cs" />
     <Compile Include="Assets\Scripts\UI\MainUIController.cs" />

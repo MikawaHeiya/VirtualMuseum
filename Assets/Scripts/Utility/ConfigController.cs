@@ -103,7 +103,8 @@ public class ConfigController : MonoBehaviour
 #if UNITY_EDITOR
         string configFilePath = Application.dataPath + "/StreamingAssets/config.json";
 #else
-        string configFilePath = "/storage/emulated/0/org.MikawaLab.VirtualMuseum/config.json";
+        //string configFilePath = "/data/data/org.MikawaLab.VirtualMuseum/config.json";
+        string configFilePath = Application.persistentDataPath + "/config.json";
 #endif
         if (File.Exists(configFilePath))
         {
@@ -124,7 +125,8 @@ public class ConfigController : MonoBehaviour
 #if UNITY_EDITOR
         string configFilePath = Application.dataPath + "/StreamingAssets/config.json";
 #else
-        string configFilePath = "/storage/emulated/0/org.MikawaLab.VirtualMuseum/config.json";
+        //string configFilePath = "/data/data/org.MikawaLab.VirtualMuseum/config.json";
+        string configFilePath = Application.persistentDataPath + "/config.json";
 #endif
         var writer = new StreamWriter(configFilePath);
         var json = Newtonsoft.Json.JsonConvert.SerializeObject(Config);
