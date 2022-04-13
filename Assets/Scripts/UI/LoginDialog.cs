@@ -7,6 +7,9 @@ public class LoginDialog : MonoBehaviour
 {
     public Text mailText;
     public Text verifyCodeText;
+    public Text sendVerifyCodeButtonText;
+
+    private bool isSendVerifyCodeCooldown = false;
 
     public string MailInputContent
     { get { return mailText.text; } }
@@ -18,21 +21,48 @@ public class LoginDialog : MonoBehaviour
     public event System.Action LoginButtonClicked;
     public event System.Action CancelButtonCLicked;
 
+    public void StartSendVerifyCodeButtonCooldown(int cooldown)
+    {
+        StartCoroutine(SendVerifyCodeButtonCooldown(cooldown));
+    }
+
+    private IEnumerator SendVerifyCodeButtonCooldown(int cooldown)
+    {
+        isSendVerifyCodeCooldown = true;
+
+        while (cooldown-- > 0)
+        {
+            sendVerifyCodeButtonText.text = $"{cooldown}s";
+            yield return new WaitForSeconds(1f);
+        }
+
+        isSendVerifyCodeCooldown = false;
+        sendVerifyCodeButtonText.text = "·¢ËÍ";
+        yield break;
+    }
+
     public void OnSendVerifyCodeButtonClicked()
     {
-        SendVerifyCodeButtonClicked?.Invoke();
+        if (!isSendVerifyCodeCooldown)
+        {
+            SendVerifyCodeButtonClicked?.Invoke();
+        }
     }
 
     public void OnLoginButtonClicked()
     {
         LoginButtonClicked?.Invoke();
-        animator.SetTrigger("Exit");
     }
 
     public void OnCancelButtonClicked()
     {
         CancelButtonCLicked?.Invoke();
-        animator.SetTrigger("Exit");
+        uiAnimation.PlayExitAnimation(SelfDestroy);
+    }
+
+    public void Exit()
+    {
+        uiAnimation.PlayExitAnimation(SelfDestroy);
     }
 
     public void SelfDestroy()
@@ -40,10 +70,10 @@ public class LoginDialog : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private Animator animator;
+    private UIAnimation uiAnimation;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        uiAnimation = GetComponent<UIAnimation>();
     }
 }

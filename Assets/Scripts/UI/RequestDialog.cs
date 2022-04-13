@@ -18,13 +18,13 @@ public class RequestDialog : MonoBehaviour
     public void OnPositiveButtonClicked()
     {
         PositiveButtonClicked?.Invoke();
-        animator.SetTrigger("Exit");
+        uIAnimation.PlayExitAnimation(SelfDestroy);
     }
 
     public void OnNegativeButtonClicked()
     {
         NegativeButtonClicked?.Invoke();
-        animator.SetTrigger("Exit");
+        uIAnimation.PlayExitAnimation(SelfDestroy);
     }
 
     public void SelfDestroy()
@@ -32,10 +32,10 @@ public class RequestDialog : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private Animator animator;
+    private UIAnimation uIAnimation;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        uIAnimation = GetComponent<UIAnimation>();
     }
 }

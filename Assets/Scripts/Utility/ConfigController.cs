@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
-using ManoMotion;
 
 public struct ConfigInfo
 {
@@ -11,13 +10,13 @@ public struct ConfigInfo
     public int QrCodeCameraFlushFrequency;
     public int PositiveGestureType;
     public int RotateScaleGestureType;
-    public string email;
-    public string password;
+    public string Email;
+    public string Passport;
 }
 
 public class ConfigController : MonoBehaviour
 {
-    public static ConfigInfo Config { get; set; } = new ConfigInfo();
+    public static ConfigInfo Config { get; set; } = DefaultConfig();
 
     private void Start()
     {
@@ -27,12 +26,12 @@ public class ConfigController : MonoBehaviour
     private static ConfigInfo DefaultConfig()
     {
         var config = new ConfigInfo();
-        config.ShowDebugConsole = true;
+        config.ShowDebugConsole = false;
         config.QrCodeCameraFlushFrequency = 5;
         config.PositiveGestureType = 3;
         config.RotateScaleGestureType = 2;
-        config.email = "";
-        config.password = "";
+        config.Email = string.Empty;
+        config.Passport = string.Empty;
 
         return config;
     }
@@ -42,7 +41,23 @@ public class ConfigController : MonoBehaviour
         return 
             l.ShowDebugConsole == r.ShowDebugConsole &&
             l.QrCodeCameraFlushFrequency == r.QrCodeCameraFlushFrequency &&
-            l.PositiveGestureType == r.PositiveGestureType;
+            l.PositiveGestureType == r.PositiveGestureType && 
+            l.RotateScaleGestureType == r.RotateScaleGestureType &&
+            l.Email == r.Email &&
+            l.Passport == r.Passport;
+
+    }
+
+    public static string ConfigInfoToJSON(ConfigInfo config)
+    {
+        return "{" + 
+                        $"\"ShowDebugConsole\": {config.ShowDebugConsole.ToString().ToLowerInvariant()}, " + 
+                        $"\"QrCodeCameraFlushFrequency\": {config.QrCodeCameraFlushFrequency}, " + 
+                        $"\"PositiveGestureType\": {config.PositiveGestureType}, " + 
+                        $"\"RotateScaleGestureType\": {config.RotateScaleGestureType}, " + 
+                        $"\"Email\": \"{config.Email}\", " + 
+                        $"\"Passport\": \"{config.Passport}\"" + 
+                  "}";
     }
 
     public static int GestureTriggerToIndex(ManoGestureTrigger trigger)
@@ -103,7 +118,6 @@ public class ConfigController : MonoBehaviour
 #if UNITY_EDITOR
         string configFilePath = Application.dataPath + "/StreamingAssets/config.json";
 #else
-        //string configFilePath = "/data/data/org.MikawaLab.VirtualMuseum/config.json";
         string configFilePath = Application.persistentDataPath + "/config.json";
 #endif
         if (File.Exists(configFilePath))
@@ -125,11 +139,10 @@ public class ConfigController : MonoBehaviour
 #if UNITY_EDITOR
         string configFilePath = Application.dataPath + "/StreamingAssets/config.json";
 #else
-        //string configFilePath = "/data/data/org.MikawaLab.VirtualMuseum/config.json";
         string configFilePath = Application.persistentDataPath + "/config.json";
 #endif
+        var json = ConfigInfoToJSON(Config);
         var writer = new StreamWriter(configFilePath);
-        var json = Newtonsoft.Json.JsonConvert.SerializeObject(Config);
         await writer.WriteAsync(json);
         writer.Close();
     }

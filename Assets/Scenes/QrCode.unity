@@ -435,6 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425353164}
   - component: {fileID: 425353165}
+  - component: {fileID: 425353166}
   m_Layer: 5
   m_Name: QrCode
   m_TagString: Untagged
@@ -471,6 +472,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425353163}
   m_CullTransparentMesh: 1
+--- !u!114 &425353166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425353163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a09fc0872f919944bed78314ba53697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originTransparency: 0
+  targetTransparency: 1
+  transparencyStep: 0.1
 --- !u!1 &465893696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1332,7 @@ GameObject:
   - component: {fileID: 1536769853}
   - component: {fileID: 1536769855}
   - component: {fileID: 1536769854}
+  - component: {fileID: 1536769856}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1383,6 +1400,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536769852}
   m_CullTransparentMesh: 1
+--- !u!114 &1536769856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536769852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a09fc0872f919944bed78314ba53697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originTransparency: 0
+  targetTransparency: 1
+  transparencyStep: 0.1
 --- !u!1 &1659829515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1501,7 @@ GameObject:
   - component: {fileID: 2040402098}
   - component: {fileID: 2040402097}
   - component: {fileID: 2040402099}
+  - component: {fileID: 2040402100}
   m_Layer: 5
   m_Name: BackButon
   m_TagString: Untagged
@@ -1561,6 +1594,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &2040402100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040402095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a09fc0872f919944bed78314ba53697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originTransparency: 0
+  targetTransparency: 1
+  transparencyStep: 0.1
 --- !u!1 &2091443565
 GameObject:
   m_ObjectHideFlags: 0
