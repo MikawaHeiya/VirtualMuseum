@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Android;
 
@@ -33,6 +34,17 @@ public class InitializeSceneApplication : MonoBehaviour
             Permission.RequestUserPermission(Permission.Camera);
         }
 #endif*/
+#if UNITY_EDITOR
+        string configFilePath = Application.dataPath + "/StreamingAssets/config.json";
+#else
+        string configFilePath = Application.persistentDataPath + "/config.json";
+#endif
+        int nextSceneID = 1;
+        if (!File.Exists(configFilePath))
+        {
+            nextSceneID = 5;
+        }
+
         await ConfigController.ReadConfig();
 
         if (ConfigController.Config.ShowDebugConsole)
@@ -58,6 +70,6 @@ public class InitializeSceneApplication : MonoBehaviour
             }
         }
 
-        sceneLoader.LoadScene(1);
+        sceneLoader.LoadScene(nextSceneID);
     }
 }

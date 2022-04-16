@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 3130892118
+CRC: 3016268447
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: ab_test_cube
+      Dependencies: {}
+    Info_1:
+      Name: ab_test_horn
       Dependencies: {}

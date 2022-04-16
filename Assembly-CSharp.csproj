@@ -130,6 +130,9 @@
     <Compile Include="Assets\Scripts\Utility\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Utility\ExhibitionSceneApplication.cs" />
     <Compile Include="Assets\Scripts\Utility\ExhibitionSceneParameterPasser.cs" />
+    <Compile Include="Assets\Scripts\Utility\GuideSceneApplication.cs" />
+    <Compile Include="Assets\Scripts\Utility\GuideSceneElement.cs" />
+    <Compile Include="Assets\Scripts\Utility\GuideSceneElementGestureTrigger.cs" />
     <Compile Include="Assets\Scripts\Utility\InitializeSceneApplication.cs" />
     <Compile Include="Assets\Scripts\Utility\InputUtil.cs" />
     <Compile Include="Assets\Scripts\Utility\MainSceneApplication.cs" />
